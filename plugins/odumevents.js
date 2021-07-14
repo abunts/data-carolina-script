@@ -12,6 +12,7 @@ async function getAPI(api_url) {
   }
   return [];
 }
+
 function transformEvents(info) {
   try {
     let infoArray = info?.map((event) => ({
