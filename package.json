@@ -20,7 +20,9 @@
   "license": "ISC",
   "dependencies": {
     "esm": "^3.2.25",
-    "node-fetch": "^2.6.1"
+    "init": "^0.1.2",
+    "node-fetch": "^2.6.1",
+    "package": "^1.0.1"
   },
   "repository": {
     "type": "git",
