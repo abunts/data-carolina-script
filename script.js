@@ -10,15 +10,12 @@ const fetchAllEvents = async () => {
 
     const odumEvents = await fetchOdumEvents();
     actualEvents.push(odumEvents);
-
+    
     actualEvents.sort((a, b) => a - b)
-
     console.log(actualEvents);
 
     return actualEvents;
 }
-
-//writing data to JSON file
 const writeEvents = async (info) => {
     const jsonString = JSON.stringify(info, null, 2);
     fs.writeFile('./newEvents.json', jsonString, (err) => {
@@ -29,7 +26,6 @@ const writeEvents = async (info) => {
         }
     });
 }
-
 (async () => {
     try {
         const info = fetchAllEvents();
