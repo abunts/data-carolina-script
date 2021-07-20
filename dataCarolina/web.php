@@ -14,5 +14,7 @@ $jsonArray = json_decode($eventData, true);
  curl_setopt($curl, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
  //sending the request 
  curl_exec($curl);
+ 
+ //need to connect the cURL session with the eventData to send the JSON data with the HTTP request
  ?>
 
