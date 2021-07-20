@@ -34,6 +34,7 @@
   "homepage": "https://github.com/abunts/data-carolina-script#readme",
   "description": "",
   "devDependencies": {
+    "concurrently": "^6.2.0",
     "nodemon": "^2.0.11"
   }
 }
