@@ -1,6 +1,13 @@
 <?php
-$newEventsContents = file_get_contents("./newEvents.json");
-$newEventsArray = json_decode(newEventsJSON, true);
+//reading JSON file contents
+$data = file_get_contents("./newEvents.json");
+//converting JSON file contents to PHP associative array
+$newEventsArray = json_decode(data, true);
 ?>
- var nEvents = <?php echo newEventsContents; ?>;
-<?php echo nEvents?>
+
+//echo data while defining a JS variable
+
+var nEvents = <?php echo data;?>
+console.log(nEvents);
+
+
