@@ -1,19 +1,20 @@
 {
   "name": "script",
   "version": "1.0.0",
-  "main": "script.js",
-  "module": "app.js",
-  "type": "module",
+  "main": "src/api.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon --ignore '*.json' app.js"
+    "start": "nodemon --ignore '*.json' src/api.js",
+    "lambda-start": "netlify-lambda serve src",
+    "lambda-build": "netlify-lambda build src"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "esm": "^3.2.25",
     "express": "^4.17.1",
-    "node-fetch": "^2.6.1"
+    "netlify-lambda": "^2.0.11",
+    "node-fetch": "^2.6.1",
+    "serverless-http": "^2.7.0"
   },
   "repository": {
     "type": "git",
