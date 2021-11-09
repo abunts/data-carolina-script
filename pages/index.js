@@ -33,6 +33,11 @@ export default function Home() {
   const handleClickSearch = event => {
     console.log(`\n\n\n\n the search button was clicked!\n\n\n\n`)
     console.log(`the query string is "${ inputElement.current.value }"`)
+    // the value inside the textbox is inputElement.current.value
+    // send request to api at this URI:
+    //   `/api/events?pid=${ inputElement.current.value }`
+    // you'll get JSON back with filtered events.
+   GET('/api/events?pid={ inputElement.current.value }');
   }
 
   if (error) {
@@ -46,14 +51,12 @@ export default function Home() {
       <div>no events!</div>
     )
   }
-  
   return (
     <div>
       <div>
         <input ref={ inputElement }/>
         <button onClick={ handleClickSearch }>search</button>
       </div>
-
       <hr />
       { events.length } events
       <EventsList events={ events } />
