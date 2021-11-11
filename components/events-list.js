@@ -1,6 +1,7 @@
 import styles from '../styles/events.module.css'
 
 export const EventsList = ({ events }) => {
+  <div dangerouslySetInnerHTML={{ __html: event.description }} />
   return (
     <div className={ styles.eventsList }>
       {
