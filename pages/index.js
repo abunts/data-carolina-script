@@ -30,6 +30,7 @@ export default function Home() {
     fetchEvents();
   }, []);
   // this function fires when the search button is clicked
+  const api = '/api/events?pid={ inputElement.current.value }';
   const handleClickSearch = event => {
     console.log(`\n\n\n\n the search button was clicked!\n\n\n\n`)
     console.log(`the query string is "${ inputElement.current.value }"`)
@@ -37,7 +38,6 @@ export default function Home() {
     // send request to api at this URI:
     //   `/api/events?pid=${ inputElement.current.value }`
     // you'll get JSON back with filtered events.
-   const api = '/api/events?pid={ inputElement.current.value }';
    fetch(api);
   }
 
