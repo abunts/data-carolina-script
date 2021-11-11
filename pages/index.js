@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import axios from 'axios'
 import { EventsList } from '../components/events-list'
+import fetch from "node-fetch";
 
 export default function Home() {
   // variable to store the events in front-end's "state"
@@ -28,7 +29,6 @@ export default function Home() {
     }
     fetchEvents();
   }, []);
-
   // this function fires when the search button is clicked
   const handleClickSearch = event => {
     console.log(`\n\n\n\n the search button was clicked!\n\n\n\n`)
@@ -37,7 +37,8 @@ export default function Home() {
     // send request to api at this URI:
     //   `/api/events?pid=${ inputElement.current.value }`
     // you'll get JSON back with filtered events.
-   GET('/api/events?pid={ inputElement.current.value }');
+   const api = '/api/events?pid={ inputElement.current.value }';
+   fetch(api);
   }
 
   if (error) {
